@@ -1,0 +1,6 @@
+jasypt:
+  encryptor:
+    password: salt #123456
+
+demo:
+    test: ENC(hzh730PDIkejKz1FAEAKww==)
