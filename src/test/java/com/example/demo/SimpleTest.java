@@ -12,7 +12,7 @@ public class SimpleTest {
         BasicTextEncryptor textEncryptor = new BasicTextEncryptor();
         //使用的是加密算法是:PBEWithMD5AndDES,注意maven不同版本算法可能不同
         textEncryptor.setPassword("123456");
-        String newPassword = textEncryptor.encrypt("123456");
+        String newPassword = textEncryptor.encrypt("sd说道");
         System.out.println(newPassword);
         // 解密
         BasicTextEncryptor textEncryptor2 = new BasicTextEncryptor();
