@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -10,15 +11,16 @@ import javax.annotation.PostConstruct;
  * @author issac.hu
  */
 @Service
+@RefreshScope
 public class TestService {
 
     @Value("${demo.test}")
     private String test;
 
-    @NacosValue(value = "${username:aaa}",autoRefreshed = true)
+    @Value(value = "${username:aaa}")
     private String userName;
 
-    @NacosValue(value = "${enc:aaa}",autoRefreshed = true)
+    @Value(value = "${enc:aaa}")
     private String enc;
 
     @PostConstruct

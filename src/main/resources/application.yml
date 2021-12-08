@@ -6,29 +6,6 @@ demo:
     test: ENC(hzh730PDIkejKz1FAEAKww==)
 
 server:
-  port: 8091
+  port: 8080
 
-nacos:
-  config:
-    server-addr: 127.0.0.1:8848
-    namespace: test
-    group: DEFAULT_GROUP
-    data-id: demo-test.yml
-  
-
-#spring:
-#  application:
-#    name: demo
-#  profiles:
-#    active: test
-#  cloud:
-#    nacos:
-#      config:
-#        server-addr: 127.0.0.1:8848
-#        file-extension: yml
-#       # group: DEFAULT_GROUP
-#        namespace: test #dev命名空间的ID
-#        enabled: true
-#      #  prefix: ${spring.application.name}
-#        refresh-enabled: true
 

@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        refresh-enabled: true
+        server-addr: localhost:8848
+        username: nacos
+        password: root
+        namespace: ${spring.profiles.active}
+  profiles:
+    active: test
+  application:
+    name: demo
